@@ -55,7 +55,7 @@ input[type="radio"], input[type="checkbox"]{
   margin-right:8px;
 }
 
-button[type="submit"]{
+#submitButton{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
   color:white;
   border:none;
@@ -65,7 +65,7 @@ button[type="submit"]{
   cursor:pointer;
   box-shadow:0 8px 18px rgba(58,134,255,0.12);
 }
-button[type="submit"]:hover{
+#submitButton:hover{
   transform:translateY(-1px);
 }
 

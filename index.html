@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Order Your Custom Smoothie</h1>
-    <form method="POST">
+    <form>
         <div>
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
@@ -56,7 +56,8 @@
             <label for="notes">Special Instructions:</label><br>
             <textarea id="notes" name="notes" rows="3" cols="30"></textarea>
         </div>
-        <button type="submit">Place Order</button>
+        <button id="submitButton">Place Order</button>
     </form>
+    <p id="orderSummary">This is the order summary</p>
 </body>
 </html>
