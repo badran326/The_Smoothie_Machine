@@ -1,0 +1,71 @@
+:root{
+  --bg:#f6fbff;
+  --card:#ffffff;
+  --accent:#45c2a8;
+  --accent-2:#3a86ff;
+  --muted:#6b7280;
+  --radius:10px;
+}
+
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#eaf6fb);
+  color:#0b1320;
+  padding:32px 16px;
+}
+
+/* Center the content */
+form{
+  max-width:720px;
+  margin:18px auto;
+  padding:22px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(15,23,42,0.06);
+}
+
+h1{
+  margin:0 0 14px;
+  font-size:24px;
+}
+label{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+input[type="text"], select, textarea{
+  width:100%;padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6eef8;
+  background:#fff;
+  font-size:14px;
+}
+
+/* Group rows */
+form > div{
+  margin-bottom:14px;
+}
+
+/* Inline controls (radios/checkboxes) */
+input[type="radio"], input[type="checkbox"]{
+  margin-right:8px;
+}
+
+button[type="submit"]{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(58,134,255,0.12);
+}
+button[type="submit"]:hover{
+  transform:translateY(-1px);
+}
+
