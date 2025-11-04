@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+</head>
+<body>
+    <h1>Order Your Custom Smoothie</h1>
+    <form action="/submit-order" method="POST">
+        <div>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="small">Small (12 oz)</option>
+                <option value="medium">Medium (16 oz)</option>
+                <option value="large">Large (20 oz)</option>
+            </select>
+        </div>
+        <div>
+            <label>Base:</label>
+            <input type="radio" id="yogurt" name="base" value="yogurt" required>
+            <label for="yogurt">Yogurt</label>
+            <input type="radio" id="juice" name="base" value="juice">
+            <label for="juice">Juice</label>
+            <input type="radio" id="milk" name="base" value="milk">
+            <label for="milk">Milk</label>
+        </div>
+        <div>
+            <label>Fruits:</label><br>
+            <input type="checkbox" id="strawberry" name="fruits" value="strawberry">
+            <label for="strawberry">Strawberry</label>
+            <input type="checkbox" id="banana" name="fruits" value="banana">
+            <label for="banana">Banana</label>
+            <input type="checkbox" id="mango" name="fruits" value="mango">
+            <label for="mango">Mango</label>
+            <input type="checkbox" id="blueberry" name="fruits" value="blueberry">
+            <label for="blueberry">Blueberry</label>
+        </div>
+
+        <div>
+            <label for="extras">Add-ons:</label><br>
+            <input type="checkbox" id="protein" name="extras" value="protein">
+            <label for="protein">Protein Powder</label>
+            <input type="checkbox" id="honey" name="extras" value="honey">
+            <label for="honey">Honey</label>
+            <input type="checkbox" id="chia" name="extras" value="chia">
+            <label for="chia">Chia Seeds</label>
+        </div>
+        <div>
+            <label for="notes">Special Instructions:</label><br>
+            <textarea id="notes" name="notes" rows="3" cols="30"></textarea>
+        </div>
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
