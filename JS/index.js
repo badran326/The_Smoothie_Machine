@@ -9,9 +9,17 @@ class Smoothie {
     }
 
     displayOrder() {
-        const orderSummary = document.getElementById('orderSummary');
-        orderSummary.textContent = `Thank you, ${this.name}! Your ${this.size} smoothie with ${this.base}, fruits: ${this.fruits.join(', ')}, add-ons: ${this.addons.join(', ')}, and special instructions: "${this.notes}" has been received.`;
-    }
+    const orderSummary = document.getElementById('orderSummary');
+    orderSummary.innerHTML = `Thank you, ${this.name}!<br>
+    <br>
+    Your ${this.size} smoothie with:<br>
+    - ${this.base}<br>
+    - Fruits: ${this.fruits.join(', ')}<br>
+    - Add-ons: ${this.addons.join(', ')}<br>
+    - Special instructions: "${this.notes}"<br>
+    <br>
+    has been received.`;
+}
 }
 
 document.querySelector('form').onsubmit = function(e) {
