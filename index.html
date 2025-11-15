@@ -17,9 +17,9 @@
         <div>
             <label for="size">Size:</label>
             <select id="size" name="size" required>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
+                <option value="small">Small - $5.00</option>
+                <option value="medium">Medium - $6.50</option>
+                <option value="large">Large - $8.00</option>
             </select>
         </div>
         <div>
@@ -34,23 +34,23 @@
         <div>
             <label>Fruits:</label><br>
             <input type="checkbox" id="strawberry" name="fruits" value="strawberry">
-            <label for="strawberry">Strawberry</label>
+            <label for="strawberry">Strawberry <span class="price-tag">+$0.75</span></label>
             <input type="checkbox" id="banana" name="fruits" value="banana">
-            <label for="banana">Banana</label>
+            <label for="banana">Banana <span class="price-tag">+$0.75</span></label>
             <input type="checkbox" id="mango" name="fruits" value="mango">
-            <label for="mango">Mango</label>
+            <label for="mango">Mango <span class="price-tag">+$0.75</span></label>
             <input type="checkbox" id="blueberry" name="fruits" value="blueberry">
-            <label for="blueberry">Blueberry</label>
+            <label for="blueberry">Blueberry <span class="price-tag">+$0.75</span></label>
         </div>
 
         <div>
             <label for="extras">Add-ons:</label><br>
             <input type="checkbox" id="protein" name="extras" value="protein">
-            <label for="protein">Protein Powder</label>
+            <label for="protein">Protein Powder <span class="price-tag">+$1.00</span></label>
             <input type="checkbox" id="honey" name="extras" value="honey">
-            <label for="honey">Honey</label>
+            <label for="honey">Honey <span class="price-tag">+$1.00</span></label>
             <input type="checkbox" id="chia" name="extras" value="chia">
-            <label for="chia">Chia Seeds</label>
+            <label for="chia">Chia Seeds <span class="price-tag">+$1.00</span></label>
         </div>
         <div>
             <label for="notes">Special Instructions:</label><br>
@@ -58,6 +58,60 @@
         </div>
         <button id="submitButton">Place Order</button>
     </form>
+
+    <!-- Bill Section -->
+    <div id="billSection" class="bill-container">
+        <div class="bill-header">
+            <h2>Order Bill</h2>
+        </div>
+        <div class="bill-content">
+            <div class="bill-item">
+                <span class="bill-label">Customer Name:</span>
+                <span class="bill-value" id="billName">-</span>
+            </div>
+            <div class="bill-divider"></div>
+            
+            <div class="bill-item">
+                <span class="bill-label">Base Smoothie:</span>
+                <span class="bill-value" id="billSize">-</span>
+            </div>
+            <div class="bill-item">
+                <span class="bill-label">Price:</span>
+                <span class="bill-price" id="billSizePrice">$0.00</span>
+            </div>
+
+            <div class="bill-item" id="billFruitsRow">
+                <span class="bill-label">Fruits:</span>
+                <span class="bill-value" id="billFruits">-</span>
+            </div>
+            <div class="bill-item" id="billFruitsPriceRow">
+                <span class="bill-label">Fruits Total:</span>
+                <span class="bill-price" id="billFruitsPrice">$0.00</span>
+            </div>
+
+            <div class="bill-item" id="billAddonsRow">
+                <span class="bill-label">Add-ons:</span>
+                <span class="bill-value" id="billAddons">-</span>
+            </div>
+            <div class="bill-item" id="billAddonsPriceRow">
+                <span class="bill-label">Add-ons Total:</span>
+                <span class="bill-price" id="billAddonsPrice">$0.00</span>
+            </div>
+
+            <div class="bill-item" id="billNotesRow">
+                <span class="bill-label">Special Notes:</span>
+                <span class="bill-value" id="billNotes">-</span>
+            </div>
+
+            <div class="bill-divider"></div>
+            
+            <div class="bill-item bill-total">
+                <span class="bill-label">Total Amount:</span>
+                <span class="bill-total-amount" id="billTotal">$0.00</span>
+            </div>
+        </div>
+    </div>
+
     <p id="orderSummary">This is the order summary</p>
 </body>
 </html>

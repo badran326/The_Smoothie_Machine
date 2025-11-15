@@ -69,6 +69,28 @@ input[type="radio"], input[type="checkbox"]{
   transform:translateY(-1px);
 }
 
+/* Price tag styling for individual items */
+.price-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  background: linear-gradient(90deg, rgba(69, 194, 168, 0.15), rgba(58, 134, 255, 0.15));
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 1px solid rgba(69, 194, 168, 0.3);
+}
+
+/* Checkbox/radio labels with prices */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
 /* Order Summary styles */
 #orderSummary {
   max-width: 720px;
@@ -94,5 +116,119 @@ input[type="radio"], input[type="checkbox"]{
   display: inline-block;
   margin-right: 8px;
   font-size: 20px;
+}
+
+/* Bill Section Styling */
+.bill-container {
+  max-width: 720px;
+  margin: 32px auto;
+  padding: 24px;
+  background: linear-gradient(135deg, #fafbfc 0%, #f0f4f8 100%);
+  border: 2px solid #e6eef8;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+  display: none;
+}
+
+.bill-container.show {
+  display: block;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bill-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e6eef8;
+  padding-bottom: 12px;
+}
+
+.bill-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #0b1320;
+}
+
+.bill-content {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.bill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.bill-label {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.bill-value {
+  color: #0b1320;
+  font-weight: 500;
+  text-align: right;
+  flex: 1;
+  margin-left: 16px;
+  word-break: break-word;
+}
+
+.bill-price {
+  color: var(--accent);
+  font-weight: 700;
+  text-align: right;
+  margin-left: 16px;
+  font-size: 16px;
+}
+
+.bill-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e6eef8, transparent);
+  margin: 12px 0;
+}
+
+.bill-total {
+  background: linear-gradient(90deg, rgba(69, 194, 168, 0.05), rgba(58, 134, 255, 0.05));
+  padding: 14px;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent);
+}
+
+.bill-total .bill-label {
+  font-size: 16px;
+  color: #0b1320;
+}
+
+.bill-total-amount {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 16px;
+}
+
+/* Hidden bill items (JS will show them) */
+#billFruitsRow,
+#billFruitsPriceRow,
+#billAddonsRow,
+#billAddonsPriceRow,
+#billNotesRow {
+  display: none;
 }
 
